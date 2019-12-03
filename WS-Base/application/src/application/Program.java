@@ -33,11 +33,38 @@ public class Program {
 
 		}
 		// -------------------------------------------------------------------- >
+		System.out.println();
 		System.out.print("Enter the employee id that will have salary increase: ");
 		int id = sc.nextInt();
+		System.out.println();
 		// -------------------------------------------------------------------- >
 		Employee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
 		// -------------------------------------------------------------------- >
+		int cx = (emp == null) ? 1 : 2;
+		// ---------------------------- >
+		switch (cx) {
+		// ---------------------------- >
+		case 1:
+
+			System.out.println("This id does not exist!");
+			break;
+
+		case 2:
+
+			System.out.print("Enter the percentage: ");
+			double percentage = sc.nextDouble();
+			emp.increaseSalary(percentage);
+			break;
+
+		}
+		// -------------------------------------------------------------------- >
+		System.out.println();
+		System.out.println("List of employees: ");
+		// -------------------------------------------------------------------- >
+		for (Employee obj : list) {
+			
+			System.out.println(obj);
+		}
 		// -------------------------------------------------------------------- >
 		sc.close();
 

@@ -9,12 +9,14 @@ public class Employee {
 	// ------------------------------------------------------------------------ >
 	public Employee() {
 	}
+
 	public Employee(Integer id, String name, Double salary) {
 
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
 	}
+
 	// ------------------------------------------------------------------------ >
 	public Integer getId() {
 		return id;
@@ -35,19 +37,22 @@ public class Employee {
 	public Double getSalary() {
 		return salary;
 	}
+
 	public void setSalary(Double salary) {
 		this.salary = salary;
 	}
+
 	// ------------------------------------------------------------------------ >
 	public void increaseSalary(double percentage) {
 
-		this.salary += (salary * percentage / 10);
+		this.salary += (salary * percentage / 100);
 
 	}
+
 	// ------------------------------------------------------------------------ >
 	public String toString() {
 
-		return id + name + String.format("%.2f", salary);
+		return id + ", " + name + ", " + String.format("%.2f", salary);
 
 	}
 
