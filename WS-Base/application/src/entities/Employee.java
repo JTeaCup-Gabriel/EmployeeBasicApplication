@@ -9,7 +9,6 @@ public class Employee {
 	// ------------------------------------------------------------------------ >
 	public Employee() {
 	}
-
 	public Employee(Integer id, String name, Double salary) {
 
 		this.id = id;
@@ -17,7 +16,6 @@ public class Employee {
 		this.salary = salary;
 	}
 	// ------------------------------------------------------------------------ >
-
 	public Integer getId() {
 		return id;
 	}
@@ -37,18 +35,15 @@ public class Employee {
 	public Double getSalary() {
 		return salary;
 	}
-
 	public void setSalary(Double salary) {
 		this.salary = salary;
 	}
-
 	// ------------------------------------------------------------------------ >
 	public void increaseSalary(double percentage) {
 
 		this.salary += (salary * percentage / 10);
 
 	}
-
 	// ------------------------------------------------------------------------ >
 	public String toString() {
 
