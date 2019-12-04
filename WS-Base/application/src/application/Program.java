@@ -1,7 +1,10 @@
 package application;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
@@ -11,6 +14,14 @@ import entities.Employee;
 public class Program {
 
 	public static void main(String[] args) throws IOException {
+		// -------------------------------------------------------------------- >
+		// SimpleDateFormat sdf1 = new SimpleDateFormat("dd:MM:yy HH:mm:ss");
+		SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yy");
+		System.out.print("Data: ");
+		Date d = Date.from(Instant.parse("2019-12-04T08:37:00Z"));
+		System.out.println(sdf2.format(d));
+		System.out.println();
+		// -------------------------------------------------------------------- >
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		List<Employee> list = new ArrayList<>();
